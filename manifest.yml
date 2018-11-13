@@ -1,0 +1,7 @@
+---
+applications:
+- name: oauthtest
+  memory: 256M
+  instances: 1
+  path: target/oauth2-simple-0.0.1-SNAPSHOT.jar
+  health-check-type: process
