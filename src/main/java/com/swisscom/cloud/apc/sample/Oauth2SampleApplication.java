@@ -108,10 +108,10 @@ public class Oauth2SampleApplication {
         HashMap<String, Object> props = new HashMap<>();
 
         props.put("security.oauth2.client.clientId", credentials.get("clientId"));
-        props.put("security.oauth2.client.clientSecret", credentials.get("clientSecret"));
-        props.put("security.oauth2.client.accessTokenUri", credentials.get("tokenEndpoint"));
-        props.put("security.oauth2.client.userAuthorizationUri", credentials.get("authorizationEndpoint"));
-        props.put("security.oauth2.resource.userInfoUri", credentials.get("userInfoEndpoint"));
+        props.put("security.oauth2.client.clientSecret", credentials.get("secret"));
+        props.put("security.oauth2.client.accessTokenUri", credentials.get("oauthServerUrl")+ "/token");
+        props.put("security.oauth2.client.userAuthorizationUri", credentials.get("oauthServerUrl")+"/authorization");
+        props.put("security.oauth2.resource.userInfoUri", credentials.get("oauthServerUrl") + "/userInfo");
         props.put("sample.oauth2.logoutEndpoint", credentials.get("logoutEndpoint"));
         props.put("security.resources.chain.enabled", true);
 
