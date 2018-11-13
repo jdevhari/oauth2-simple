@@ -129,7 +129,7 @@ public class Oauth2SampleApplication {
             return services.stream().filter(o -> {
                 Collection<String> tags = (Collection<String>) o.get("tags");
                 Collection<String> credentialKeys =  ((Map<String, Object>) o.get("credentials")).keySet();
-                return (tags != null && tags.contains("oauth2")) || credentialKeys.contains("authorizationEndpoint");
+                return (tags != null && tags.contains("oauth2")) || credentialKeys.contains("oauthServerUrl");
             }).findFirst().map(t -> (Map<String, Object>)t.get("credentials"));
 
         }
