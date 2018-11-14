@@ -135,4 +135,5 @@ public class Oauth2SampleApplication {
         }
         return Optional.empty();
     }
+
 }
